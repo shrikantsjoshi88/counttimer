@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="timer test" thread-count="1">
+    <listeners>
+        <listener class-name="configuration.Retry"></listener>
+        <listener class-name="configuration.Listener"></listener>
+        <listener class-name="configuration.Transformer"></listener>
+    </listeners>
+    <test name="Timer Tests">
+        <classes>
+            <class name="TestTimer">
+            <methods>
+                <include name ="testCountdownTimer"/>
+            </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
